@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andreas Karapanos · Web Development Projects</title>
+  <meta name="description" content="Web development projects by Andreas Karapanos: full-stack Node.js and PostgreSQL apps, a REST API, and live HTML, CSS and JavaScript demos.">
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #1d2330;
+      --muted: #5b6475;
+      --line: #e3e6ee;
+      --accent: #3b5bdb;
+      --accent-text: #ffffff;
+      --tag: #eef1fb;
+      --tag-text: #34408c;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12151c;
+        --card: #1b202a;
+        --text: #e8ebf2;
+        --muted: #a3abbc;
+        --line: #2b3240;
+        --accent: #7b93ff;
+        --accent-text: #0f1320;
+        --tag: #262d3b;
+        --tag-text: #c3cdfa;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 48px 16px 64px; }
+    header { margin-bottom: 40px; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 8px; }
+    .lead { color: var(--muted); font-size: 1.1rem; margin: 0 0 16px; max-width: 680px; }
+    .stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; padding: 0; list-style: none; }
+    .button {
+      display: inline-block; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 600;
+      background: var(--accent); color: var(--accent-text);
+    }
+    .button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+    section { margin-top: 48px; }
+    h2 { font-size: 1.5rem; margin: 0 0 6px; }
+    .section-note { color: var(--muted); margin: 0 0 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block; border-bottom: 1px solid var(--line); background: var(--bg); }
+    .card-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .card h3 { margin: 0; font-size: 1.15rem; }
+    .card p { margin: 0; color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+    .tags li, .stack li { background: var(--tag); color: var(--tag-text); border-radius: 999px; padding: 2px 10px; font-size: 0.85rem; }
+    .links { display: flex; gap: 10px; margin-top: auto; padding-top: 4px; }
+    .links a { font-size: 0.95rem; padding: 8px 12px; }
+    .code-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+    .code-list li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+    .code-list a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .code-list span { display: block; color: var(--muted); font-size: 0.95rem; }
+    footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.95rem; }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Andreas Karapanos</h1>
+      <p class="lead">Web development projects: full-stack apps with Node.js, Express and PostgreSQL, a REST API, and front-end demos you can try right here in your browser.</p>
+      <ul class="stack">
+        <li>JavaScript</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>REST APIs</li><li>EJS</li><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>Git</li>
+      </ul>
+      <a class="button" href="https://github.com/andreaskarapanos98">GitHub profile</a>
+    </header>
+
+    <section>
+      <h2>Full-stack projects</h2>
+      <p class="section-note">Server-rendered apps backed by PostgreSQL, each with its own repository, setup guide and screenshots.</p>
+      <div class="grid">
+        <article class="card">
+          <img src="https://raw.githubusercontent.com/andreaskarapanos98/secrets-auth-app/main/docs/screenshots/home.png" alt="Secrets app home page" loading="lazy">
+          <div class="card-body">
+            <h3>Secrets: authentication</h3>
+            <p>Register and log in with email and password or with Google. Passwords hashed with bcrypt, sessions, protected routes.</p>
+            <ul class="tags"><li>Passport</li><li>OAuth 2.0</li><li>bcrypt</li><li>PostgreSQL</li></ul>
+            <div class="links"><a class="button" href="https://github.com/andreaskarapanos98/secrets-auth-app">View code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://raw.githubusercontent.com/andreaskarapanos98/family-travel-tracker/main/docs/screenshots/map.png" alt="World map with visited countries colored" loading="lazy">
+          <div class="card-body">
+            <h3>Family Travel Tracker</h3>
+            <p>Each family member colors the countries they've visited on an SVG world map. Relational schema with foreign keys and unique constraints.</p>
+            <ul class="tags"><li>PostgreSQL</li><li>SQL</li><li>Express</li><li>SVG</li></ul>
+            <div class="links"><a class="button" href="https://github.com/andreaskarapanos98/family-travel-tracker">View code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://raw.githubusercontent.com/andreaskarapanos98/blog-rest-api/main/docs/screenshots/home.png" alt="Blog home page with posts" loading="lazy">
+          <div class="card-body">
+            <h3>Blog REST API</h3>
+            <p>A JSON REST API (GET, POST, PATCH, DELETE with proper status codes) and a separate website that uses it through axios.</p>
+            <ul class="tags"><li>REST</li><li>Express</li><li>axios</li><li>EJS</li></ul>
+            <div class="links"><a class="button" href="https://github.com/andreaskarapanos98/blog-rest-api">View code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://raw.githubusercontent.com/andreaskarapanos98/permalist/main/docs/screenshots/list.png" alt="To-do list with four items" loading="lazy">
+          <div class="card-body">
+            <h3>Permalist</h3>
+            <p>A to-do list stored in PostgreSQL with inline editing, input validation and error handling on every route.</p>
+            <ul class="tags"><li>CRUD</li><li>PostgreSQL</li><li>Express</li><li>EJS</li></ul>
+            <div class="links"><a class="button" href="https://github.com/andreaskarapanos98/permalist">View code</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Live demos</h2>
+      <p class="section-note">HTML, CSS and JavaScript projects that run right in your browser.</p>
+      <div class="grid">
+        <article class="card">
+          <img src="previews/simon-game.png" alt="Simon game" loading="lazy">
+          <div class="card-body">
+            <h3>Simon Game</h3>
+            <p>The classic memory game: repeat a growing sequence of colors and sounds. Needs a keyboard to start.</p>
+            <ul class="tags"><li>JavaScript</li><li>jQuery</li><li>Events</li><li>Audio</li></ul>
+            <div class="links"><a class="button" href="javascript/simon-game/">Play</a><a class="button secondary" href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/javascript/simon-game">Code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="previews/dicee.png" alt="Dicee game" loading="lazy">
+          <div class="card-body">
+            <h3>Dicee</h3>
+            <p>Two players roll random dice on every page refresh and the page announces the winner.</p>
+            <ul class="tags"><li>JavaScript</li><li>DOM</li></ul>
+            <div class="links"><a class="button" href="javascript/dicee/">Play</a><a class="button secondary" href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/javascript/dicee">Code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="previews/tindog.png" alt="TinDog landing page" loading="lazy">
+          <div class="card-body">
+            <h3>TinDog</h3>
+            <p>A responsive startup landing page with features, testimonials and pricing plans.</p>
+            <ul class="tags"><li>Bootstrap</li><li>Responsive</li></ul>
+            <div class="links"><a class="button" href="css/tindog/">Open</a><a class="button secondary" href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/css/tindog">Code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="previews/web-design-agency.png" alt="Web design agency page" loading="lazy">
+          <div class="card-body">
+            <h3>Web Design Agency</h3>
+            <p>A company page laid out with floats and flexbox, adapting to small screens with a media query.</p>
+            <ul class="tags"><li>CSS layout</li><li>Media queries</li></ul>
+            <div class="links"><a class="button" href="css/web-design-agency/">Open</a><a class="button secondary" href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/css/web-design-agency">Code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="previews/pricing-table.png" alt="Pricing table" loading="lazy">
+          <div class="card-body">
+            <h3>Flexbox Pricing Table</h3>
+            <p>Pricing cards that sit side by side and stack on narrower screens.</p>
+            <ul class="tags"><li>Flexbox</li><li>Responsive</li></ul>
+            <div class="links"><a class="button" href="css/pricing-table/">Open</a><a class="button secondary" href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/css/pricing-table">Code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="previews/mondrian.png" alt="Mondrian painting recreated with CSS Grid" loading="lazy">
+          <div class="card-body">
+            <h3>Mondrian</h3>
+            <p>A Piet Mondrian painting recreated with CSS Grid.</p>
+            <ul class="tags"><li>CSS Grid</li></ul>
+            <div class="links"><a class="button" href="css/mondrian/">Open</a><a class="button secondary" href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/css/mondrian">Code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="previews/motivation-meme.png" alt="Motivation meme page" loading="lazy">
+          <div class="card-body">
+            <h3>Motivation Meme</h3>
+            <p>A motivational poster page using Google Fonts, borders and centering.</p>
+            <ul class="tags"><li>CSS</li><li>Box model</li></ul>
+            <div class="links"><a class="button" href="css/motivation-meme/">Open</a><a class="button secondary" href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/css/motivation-meme">Code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="previews/flag.png" alt="Flag of Laos drawn with CSS" loading="lazy">
+          <div class="card-body">
+            <h3>Flag of Laos</h3>
+            <p>The flag of Laos drawn with CSS positioning.</p>
+            <ul class="tags"><li>CSS positioning</li></ul>
+            <div class="links"><a class="button" href="css/flag/">Open</a><a class="button secondary" href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/css/flag">Code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="previews/color-vocab.png" alt="Spanish color vocabulary page" loading="lazy">
+          <div class="card-body">
+            <h3>Color Vocab</h3>
+            <p>Spanish color words styled with an external stylesheet and CSS selectors.</p>
+            <ul class="tags"><li>CSS selectors</li></ul>
+            <div class="links"><a class="button" href="css/color-vocab/">Open</a><a class="button secondary" href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/css/color-vocab">Code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="previews/portfolio.png" alt="Multi-page HTML portfolio" loading="lazy">
+          <div class="card-body">
+            <h3>Multi-page Portfolio</h3>
+            <p>A small site linking several pages together with relative paths.</p>
+            <ul class="tags"><li>HTML</li><li>File paths</li></ul>
+            <div class="links"><a class="button" href="html/portfolio/">Open</a><a class="button secondary" href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/html/portfolio">Code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="previews/birthday-invite.png" alt="Birthday invite page" loading="lazy">
+          <div class="card-body">
+            <h3>Birthday Invite</h3>
+            <p>An invitation page with images, lists and links.</p>
+            <ul class="tags"><li>HTML</li></ul>
+            <div class="links"><a class="button" href="html/birthday-invite/">Open</a><a class="button secondary" href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/html/birthday-invite">Code</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="previews/movie-ranking.png" alt="Movie ranking page" loading="lazy">
+          <div class="card-body">
+            <h3>Movie Ranking</h3>
+            <p>A ranked list of favorite movies using headings and paragraphs.</p>
+            <ul class="tags"><li>HTML</li></ul>
+            <div class="links"><a class="button" href="html/movie-ranking/">Open</a><a class="button secondary" href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/html/movie-ranking">Code</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Node.js and SQL exercises</h2>
+      <p class="section-note">Server-side projects. They run locally, so these links open the code.</p>
+      <ul class="code-list">
+        <li><a href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/node-express/qr-code-generator">QR Code Generator</a><span>Command-line tool that turns a URL into a QR code image (inquirer, qr-image, fs).</span></li>
+        <li><a href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/node-express/password-protected-page">Password-protected page</a><span>A form whose Express route checks a password before sending the secret page.</span></li>
+        <li><a href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/node-express/band-name-generator">Band Name Generator</a><span>Random band names rendered with EJS templates and partials.</span></li>
+        <li><a href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/apis/secrets-public-api">Random Secrets</a><span>Shows a random anonymous secret fetched from a public API with axios.</span></li>
+        <li><a href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/apis/jokes-api">Jokes API</a><span>A REST API for jokes: filtering, adding, replacing, editing and deleting.</span></li>
+        <li><a href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/sql/travel-tracker">Travel Tracker</a><span>Single-user world map of visited countries stored in PostgreSQL.</span></li>
+        <li><a href="https://github.com/andreaskarapanos98/web-dev-bootcamp/tree/main/sql/world-capital-quiz">World Capital Quiz</a><span>A quiz that asks for capital cities loaded from PostgreSQL and keeps score.</span></li>
+      </ul>
+    </section>
+
+    <footer>
+      Built while completing <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">The Complete Full-Stack Web Development Bootcamp</a> by Dr. Angela Yu (The App Brewery). Project ideas and starter templates come from the course.
+    </footer>
+  </main>
+</body>
+
+</html>

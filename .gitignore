@@ -1,0 +1,5 @@
+node_modules/
+.env
+.DS_Store
+node-express/qr-code-generator/qr_image.png
+node-express/qr-code-generator/URL.txt
