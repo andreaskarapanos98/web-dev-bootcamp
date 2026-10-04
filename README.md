@@ -1,6 +1,6 @@
 # Web Development Bootcamp Projects
 
-19 smaller projects I built while learning web development, organized by topic. The HTML, CSS and JavaScript ones run live in your browser:
+11 smaller projects I built while learning web development, organized by topic. The front-end ones run live in your browser:
 
 **Live site: https://andreaskarapanos98.github.io/web-dev-bootcamp/**
 
@@ -8,8 +8,7 @@ Larger projects from the same course have their own repositories: [secrets-auth-
 
 | Folder | Projects | Practices |
 |---|---|---|
-| `html/` | Movie Ranking, Birthday Invite, Multi-page Portfolio | HTML structure, links, images, file paths |
-| `css/` | Color Vocab, Motivation Meme, Flag of Laos, Web Design Agency, Flexbox Pricing Table, Mondrian, TinDog | Selectors, box model, positioning, flexbox, grid, media queries, Bootstrap |
+| `css/` | Web Design Agency, TinDog | Layout with floats and flexbox, media queries, Bootstrap |
 | `javascript/` | Dicee, Simon Game | DOM, events, jQuery, game state, audio |
 | `node-express/` | QR Code Generator, Password-protected Page, Band Name Generator | Node.js modules, npm, Express routes, EJS |
 | `apis/` | Random Secrets, Jokes API | axios, consuming and building REST APIs |
